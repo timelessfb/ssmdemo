@@ -13,7 +13,8 @@ public class GeneratorSqlMap {
     public void generator() throws Exception {
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
-        File configFile = new File("generatorConfig.xml");
+        //特别注意，这里的路径 需从项目根路径src下开始写，因为File为java.io类，不能理解类路径
+        File configFile = new File("src/main/resources/generatorConfig.xml");
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);
