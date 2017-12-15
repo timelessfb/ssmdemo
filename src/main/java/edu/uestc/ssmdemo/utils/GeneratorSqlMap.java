@@ -10,7 +10,7 @@ import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
 public class GeneratorSqlMap {
-    public void generator() throws Exception {
+    private void generator() throws Exception {
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
         //特别注意，这里的路径 需从项目根路径src下开始写，因为File为java.io类，不能理解类路径
